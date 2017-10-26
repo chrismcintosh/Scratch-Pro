@@ -32,6 +32,9 @@ function loadConfig() {
 gulp.task('default',
   gulp.series(server, watch));
 
+gulp.task('build',
+  gulp.series(gulp.parallel(sass, javascript)));
+
 // Delete the "dist" folder
 // This happens every time a build starts
 // function clean(done) {
