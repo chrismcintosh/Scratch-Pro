@@ -1,12 +1,48 @@
-// Colors
+/* Default Colors */
 $black: #000;
 $white: #fff;
-
 $blue: #0964dd;
 $purple: #339;
 $green: #107952;
 $red: #d3131b;
 
+/* Color Scheme */
 $primary: $blue;
+
+/* Breakpoints */
+$breakpoints: (
+    small: 0px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px,
+);
+
+@mixin breakpoint($point) {
+    @if $point == xxlarge {
+        @media screen and (min-width: $beakpoints(xxlarge)) { @content ; }
+    }
+    @if $point == xlarge only {
+        @media screen and (min-width: $beakpoints(xlarge)) and (max-width: ($beakpoints(xxlarge) - 1)) { @content ; }
+    }
+    @else if $point == xlarge {
+        @media screen and (min-width: $beakpoints(xlarge)) { @content ; }
+    }
+    @else if $point == large only {
+        @media screen and (min-width: $beakpoints(large)) and (max-width: ($beakpoints(xlarge) - 1)) { @content ; }
+    }
+    @else if $point == large {
+        @media screen and (min-width: $beakpoints(large)) { @content ; }
+    }
+    @else if $point == medium only {
+        @media screen and (min-width: $beakpoints(medium)) and (max-width: ($beakpoints(large) - 1)) { @content ; }
+    }
+    @else if $point == medium {
+        @media screen and (min-width: $beakpoints(medium)) { @content ; }
+    }
+    @else if $point == small only {
+        @media screen and (max-width: ($beakpoints(small) - 1)) { @content ; }
+    }
+}
 
 $rootpx: 8px;
