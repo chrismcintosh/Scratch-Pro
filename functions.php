@@ -2,9 +2,9 @@
 /**
  * Scratch Pro
  *
- * This file adds functions to the Bolt Pro Theme.
+ * This file adds functions to the Scratch Pro Theme.
  *
- * @package Bolt Pro
+ * @package Scratch Pro
  * @author  Chris Mcintosh
  * @license GPL-2.0+
  * @link    http://www.mcintosh.io
