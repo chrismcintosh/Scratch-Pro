@@ -17,14 +17,13 @@ UNCSS_OPTIONS:
 # Gulp will reference these paths when it copies files
 PATHS:
   # Path to dist folder
-  dist: "./"  
+  dist: "./"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "assets/**/*"
     - "!assets/{img,js,scss}/**/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
-    - "node_modules/susy/sass"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
     - "assets/js/app.js"
