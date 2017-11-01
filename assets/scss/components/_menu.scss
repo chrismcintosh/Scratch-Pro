@@ -1,0 +1,54 @@
+.site-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.nav-primary {
+	grid-column-end: span 2;
+	ul {
+		list-style-type: none;
+	}
+	li {
+		float: left;
+		position: relative;
+		
+		a {
+			border: none;
+			display: block;
+			padding: 0 $rootpx*2;
+			line-height: 70px;
+			text-decoration: none;
+		}
+	}
+	@media screen and (min-width: 800px) {
+		grid-column-end: span 1;
+	}
+}
+
+.menu-text {
+     list-style-type: none;
+     padding: 0;
+}
+
+.site-title {
+	grid-column-end: span 2;
+     margin-bottom: 0;
+     text-align: center;
+     font-size: 1.8rem;
+	font-weight: 300;
+	
+	img {
+		max-height: 80px;
+		text-align: center;
+		width: auto;
+	}
+
+	a {
+		border: none;
+	}
+
+	@media screen and (min-width: 800px) {
+		grid-column-end: span 1;
+		text-align: left;
+	}
+}

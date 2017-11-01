@@ -1,1 +1,516 @@
-!function(e){function t(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var n={};return t.m=e,t.c=n,t.i=function(e){return e},t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var n=e&&e.__esModule?function(){return e["default"]}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=2)}([function(e,t,n){"use strict";(function(e){var n,o,r,i="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(u,c){"object"===i(t)&&"object"===i(e)?e.exports=c():(o=[],n=c,r="function"==typeof n?n.apply(t,o):n,!(void 0!==r&&(e.exports=r)))}(void 0,function(){return function(e){function t(o){if(n[o])return n[o].exports;var r=n[o]={exports:{},id:o,loaded:!1};return e[o].call(r.exports,r,r.exports,t),r.loaded=!0,r.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t){e.exports=function(){var e="initial",t=null,n=document.documentElement,o=["input","select","textarea"],r=[],i=[16,17,18,91,93],u=[9],c={keydown:"keyboard",keyup:"keyboard",mousedown:"mouse",mousemove:"mouse",MSPointerDown:"pointer",MSPointerMove:"pointer",pointerdown:"pointer",pointermove:"pointer",touchstart:"touch"},a=[],d=!1,s=!1,p={x:null,y:null},f={2:"touch",3:"touch",4:"mouse"},l=!1;try{var y=Object.defineProperty({},"passive",{get:function(){l=!0}});window.addEventListener("test",null,y)}catch(v){}var m=function(){c[P()]="mouse",w(),b()},w=function(){var e=!!l&&{passive:!0};window.PointerEvent?(n.addEventListener("pointerdown",h),n.addEventListener("pointermove",x)):window.MSPointerEvent?(n.addEventListener("MSPointerDown",h),n.addEventListener("MSPointerMove",x)):(n.addEventListener("mousedown",h),n.addEventListener("mousemove",x),"ontouchstart"in window&&(n.addEventListener("touchstart",E,e),n.addEventListener("touchend",E))),n.addEventListener(P(),x,e),n.addEventListener("keydown",h),n.addEventListener("keyup",h)},h=function(n){if(!d){var r=n.which,a=c[n.type];if("pointer"===a&&(a=O(n)),e!==a||t!==a){var s=document.activeElement,p=!1,f=s&&s.nodeName&&o.indexOf(s.nodeName.toLowerCase())===-1;(f||u.indexOf(r)!==-1)&&(p=!0),("touch"===a||"mouse"===a||"keyboard"===a&&r&&p&&i.indexOf(r)===-1)&&(e=t=a,b())}}},b=function(){n.setAttribute("data-whatinput",e),n.setAttribute("data-whatintent",e),a.indexOf(e)===-1&&(a.push(e),n.className+=" whatinput-types-"+e),L("input")},x=function(e){if(p.x!==e.screenX||p.y!==e.screenY?(s=!1,p.x=e.screenX,p.y=e.screenY):s=!0,!d&&!s){var o=c[e.type];"pointer"===o&&(o=O(e)),t!==o&&(t=o,n.setAttribute("data-whatintent",t),L("intent"))}},E=function(e){"touchstart"===e.type?(d=!1,h(e)):d=!0},L=function(e){for(var n=0,o=r.length;n<o;n++)r[n].type===e&&r[n].fn.call(void 0,t)},O=function(e){return"number"==typeof e.pointerType?f[e.pointerType]:"pen"===e.pointerType?"touch":e.pointerType},P=function(){var e=void 0;return e="onwheel"in document.createElement("div")?"wheel":void 0!==document.onmousewheel?"mousewheel":"DOMMouseScroll"},g=function(e){for(var t=0,n=r.length;t<n;t++)if(r[t].fn===e)return t};return"addEventListener"in window&&Array.prototype.indexOf&&m(),{ask:function(n){return"loose"===n?t:e},types:function(){return a},ignoreKeys:function(e){i=e},registerOnChange:function(e,t){r.push({fn:e,type:t||"input"})},unRegisterOnChange:function(e){var t=g(e);t&&r.splice(t,1)}}}()}])})}).call(t,n(3)(e))},function(e,t){e.exports=jQuery},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{"default":e}}var r=n(1),i=o(r),u=n(0);o(u);window.$=i["default"]},function(e,t,n){"use strict";e.exports=function(e){return e.webpackPolyfill||(e.deprecate=function(){},e.paths=[],e.children||(e.children=[]),Object.defineProperty(e,"loaded",{enumerable:!0,get:function(){return e.l}}),Object.defineProperty(e,"id",{enumerable:!0,get:function(){return e.i}}),e.webpackPolyfill=1),e}}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
+ * @version v4.3.1
+ * @link https://github.com/ten1seven/what-input
+ * @license MIT
+ */
+(function webpackUniversalModuleDefinition(root, factory) {
+	if (( false ? 'undefined' : _typeof(exports)) === 'object' && ( false ? 'undefined' : _typeof(module)) === 'object') module.exports = factory();else if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') exports["whatInput"] = factory();else root["whatInput"] = factory();
+})(undefined, function () {
+	return (/******/function (modules) {
+			// webpackBootstrap
+			/******/ // The module cache
+			/******/var installedModules = {};
+
+			/******/ // The require function
+			/******/function __webpack_require__(moduleId) {
+
+				/******/ // Check if module is in cache
+				/******/if (installedModules[moduleId])
+					/******/return installedModules[moduleId].exports;
+
+				/******/ // Create a new module (and put it into the cache)
+				/******/var module = installedModules[moduleId] = {
+					/******/exports: {},
+					/******/id: moduleId,
+					/******/loaded: false
+					/******/ };
+
+				/******/ // Execute the module function
+				/******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+				/******/ // Flag the module as loaded
+				/******/module.loaded = true;
+
+				/******/ // Return the exports of the module
+				/******/return module.exports;
+				/******/
+			}
+
+			/******/ // expose the modules object (__webpack_modules__)
+			/******/__webpack_require__.m = modules;
+
+			/******/ // expose the module cache
+			/******/__webpack_require__.c = installedModules;
+
+			/******/ // __webpack_public_path__
+			/******/__webpack_require__.p = "";
+
+			/******/ // Load entry module and return exports
+			/******/return __webpack_require__(0);
+			/******/
+		}(
+		/************************************************************************/
+		/******/[
+		/* 0 */
+		/***/function (module, exports) {
+
+			'use strict';
+
+			module.exports = function () {
+				/*
+     * variables
+     */
+
+				// last used input type
+				var currentInput = 'initial';
+
+				// last used input intent
+				var currentIntent = null;
+
+				// cache document.documentElement
+				var doc = document.documentElement;
+
+				// form input types
+				var formInputs = ['input', 'select', 'textarea'];
+
+				var functionList = [];
+
+				// list of modifier keys commonly used with the mouse and
+				// can be safely ignored to prevent false keyboard detection
+				var ignoreMap = [16, // shift
+				17, // control
+				18, // alt
+				91, // Windows key / left Apple cmd
+				93 // Windows menu / right Apple cmd
+				];
+
+				// list of keys for which we change intent even for form inputs
+				var changeIntentMap = [9 // tab
+				];
+
+				// mapping of events to input types
+				var inputMap = {
+					keydown: 'keyboard',
+					keyup: 'keyboard',
+					mousedown: 'mouse',
+					mousemove: 'mouse',
+					MSPointerDown: 'pointer',
+					MSPointerMove: 'pointer',
+					pointerdown: 'pointer',
+					pointermove: 'pointer',
+					touchstart: 'touch'
+				};
+
+				// array of all used input types
+				var inputTypes = [];
+
+				// boolean: true if touch buffer is active
+				var isBuffering = false;
+
+				// boolean: true if the page is being scrolled
+				var isScrolling = false;
+
+				// store current mouse position
+				var mousePos = {
+					x: null,
+					y: null
+				};
+
+				// map of IE 10 pointer events
+				var pointerMap = {
+					2: 'touch',
+					3: 'touch', // treat pen like touch
+					4: 'mouse'
+				};
+
+				var supportsPassive = false;
+
+				try {
+					var opts = Object.defineProperty({}, 'passive', {
+						get: function get() {
+							supportsPassive = true;
+						}
+					});
+
+					window.addEventListener('test', null, opts);
+				} catch (e) {}
+
+				/*
+     * set up
+     */
+
+				var setUp = function setUp() {
+					// add correct mouse wheel event mapping to `inputMap`
+					inputMap[detectWheel()] = 'mouse';
+
+					addListeners();
+					setInput();
+				};
+
+				/*
+     * events
+     */
+
+				var addListeners = function addListeners() {
+					// `pointermove`, `MSPointerMove`, `mousemove` and mouse wheel event binding
+					// can only demonstrate potential, but not actual, interaction
+					// and are treated separately
+					var options = supportsPassive ? { passive: true } : false;
+
+					// pointer events (mouse, pen, touch)
+					if (window.PointerEvent) {
+						doc.addEventListener('pointerdown', updateInput);
+						doc.addEventListener('pointermove', setIntent);
+					} else if (window.MSPointerEvent) {
+						doc.addEventListener('MSPointerDown', updateInput);
+						doc.addEventListener('MSPointerMove', setIntent);
+					} else {
+						// mouse events
+						doc.addEventListener('mousedown', updateInput);
+						doc.addEventListener('mousemove', setIntent);
+
+						// touch events
+						if ('ontouchstart' in window) {
+							doc.addEventListener('touchstart', touchBuffer, options);
+							doc.addEventListener('touchend', touchBuffer);
+						}
+					}
+
+					// mouse wheel
+					doc.addEventListener(detectWheel(), setIntent, options);
+
+					// keyboard events
+					doc.addEventListener('keydown', updateInput);
+					doc.addEventListener('keyup', updateInput);
+				};
+
+				// checks conditions before updating new input
+				var updateInput = function updateInput(event) {
+					// only execute if the touch buffer timer isn't running
+					if (!isBuffering) {
+						var eventKey = event.which;
+						var value = inputMap[event.type];
+						if (value === 'pointer') value = pointerType(event);
+
+						if (currentInput !== value || currentIntent !== value) {
+							var activeElem = document.activeElement;
+							var activeInput = false;
+							var notFormInput = activeElem && activeElem.nodeName && formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1;
+
+							if (notFormInput || changeIntentMap.indexOf(eventKey) !== -1) {
+								activeInput = true;
+							}
+
+							if (value === 'touch' ||
+							// ignore mouse modifier keys
+							value === 'mouse' ||
+							// don't switch if the current element is a form input
+							value === 'keyboard' && eventKey && activeInput && ignoreMap.indexOf(eventKey) === -1) {
+								// set the current and catch-all variable
+								currentInput = currentIntent = value;
+
+								setInput();
+							}
+						}
+					}
+				};
+
+				// updates the doc and `inputTypes` array with new input
+				var setInput = function setInput() {
+					doc.setAttribute('data-whatinput', currentInput);
+					doc.setAttribute('data-whatintent', currentInput);
+
+					if (inputTypes.indexOf(currentInput) === -1) {
+						inputTypes.push(currentInput);
+						doc.className += ' whatinput-types-' + currentInput;
+					}
+
+					fireFunctions('input');
+				};
+
+				// updates input intent for `mousemove` and `pointermove`
+				var setIntent = function setIntent(event) {
+					// test to see if `mousemove` happened relative to the screen
+					// to detect scrolling versus mousemove
+					if (mousePos['x'] !== event.screenX || mousePos['y'] !== event.screenY) {
+						isScrolling = false;
+
+						mousePos['x'] = event.screenX;
+						mousePos['y'] = event.screenY;
+					} else {
+						isScrolling = true;
+					}
+
+					// only execute if the touch buffer timer isn't running
+					// or scrolling isn't happening
+					if (!isBuffering && !isScrolling) {
+						var value = inputMap[event.type];
+						if (value === 'pointer') value = pointerType(event);
+
+						if (currentIntent !== value) {
+							currentIntent = value;
+
+							doc.setAttribute('data-whatintent', currentIntent);
+
+							fireFunctions('intent');
+						}
+					}
+				};
+
+				// buffers touch events because they frequently also fire mouse events
+				var touchBuffer = function touchBuffer(event) {
+					if (event.type === 'touchstart') {
+						isBuffering = false;
+
+						// set the current input
+						updateInput(event);
+					} else {
+						isBuffering = true;
+					}
+				};
+
+				var fireFunctions = function fireFunctions(type) {
+					for (var i = 0, len = functionList.length; i < len; i++) {
+						if (functionList[i].type === type) {
+							functionList[i].fn.call(undefined, currentIntent);
+						}
+					}
+				};
+
+				/*
+     * utilities
+     */
+
+				var pointerType = function pointerType(event) {
+					if (typeof event.pointerType === 'number') {
+						return pointerMap[event.pointerType];
+					} else {
+						// treat pen like touch
+						return event.pointerType === 'pen' ? 'touch' : event.pointerType;
+					}
+				};
+
+				// detect version of mouse wheel event to use
+				// via https://developer.mozilla.org/en-US/docs/Web/Events/wheel
+				var detectWheel = function detectWheel() {
+					var wheelType = void 0;
+
+					// Modern browsers support "wheel"
+					if ('onwheel' in document.createElement('div')) {
+						wheelType = 'wheel';
+					} else {
+						// Webkit and IE support at least "mousewheel"
+						// or assume that remaining browsers are older Firefox
+						wheelType = document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
+					}
+
+					return wheelType;
+				};
+
+				var objPos = function objPos(match) {
+					for (var i = 0, len = functionList.length; i < len; i++) {
+						if (functionList[i].fn === match) {
+							return i;
+						}
+					}
+				};
+
+				/*
+     * init
+     */
+
+				// don't start script unless browser cuts the mustard
+				// (also passes if polyfills are used)
+				if ('addEventListener' in window && Array.prototype.indexOf) {
+					setUp();
+				}
+
+				/*
+     * api
+     */
+
+				return {
+					// returns string: the current input type
+					// opt: 'loose'|'strict'
+					// 'strict' (default): returns the same value as the `data-whatinput` attribute
+					// 'loose': includes `data-whatintent` value if it's more current than `data-whatinput`
+					ask: function ask(opt) {
+						return opt === 'loose' ? currentIntent : currentInput;
+					},
+
+					// returns array: all the detected input types
+					types: function types() {
+						return inputTypes;
+					},
+
+					// overwrites ignored keys with provided array
+					ignoreKeys: function ignoreKeys(arr) {
+						ignoreMap = arr;
+					},
+
+					// attach functions to input and intent "events"
+					// funct: function to fire on change
+					// eventType: 'input'|'intent'
+					registerOnChange: function registerOnChange(fn, eventType) {
+						functionList.push({
+							fn: fn,
+							type: eventType || 'input'
+						});
+					},
+
+					unRegisterOnChange: function unRegisterOnChange(fn) {
+						var position = objPos(fn);
+
+						if (position) {
+							functionList.splice(position, 1);
+						}
+					}
+				};
+			}();
+
+			/***/
+		}
+		/******/])
+	);
+});
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(1);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _whatInput = __webpack_require__(0);
+
+var _whatInput2 = _interopRequireDefault(_whatInput);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.$ = _jquery2.default;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function () {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function get() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function get() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+/***/ })
+/******/ ]);

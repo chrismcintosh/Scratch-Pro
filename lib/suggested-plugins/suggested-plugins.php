@@ -46,6 +46,12 @@ function scratch_pro_register_required_plugins() {
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
 		),
 
+		array(
+			'name'     				=> 'Autoptimize', // The plugin name.
+			'slug'     				=> 'autoptimize', // The plugin slug (typically the folder name).
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+		),
+
           // // Include Ninja Forms
           // array(
           //      'name'     				=> 'Ninja Forms', // The plugin name.

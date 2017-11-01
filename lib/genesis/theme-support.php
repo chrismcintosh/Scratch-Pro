@@ -22,6 +22,9 @@ add_theme_support( 'custom-header', array(
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
+//* Remove the header right widget area
+unregister_sidebar( 'header-right' );
+
 //* Set full-width content as the default layout
 genesis_set_default_layout( 'full-width-content' );
 
