@@ -27,3 +27,6 @@ include get_stylesheet_directory() . '/lib/genesis/breadcrumbs.php';
 include get_stylesheet_directory() . '/lib/genesis/blog-featured-image.php';
 include get_stylesheet_directory() . '/lib/genesis/move-pagination.php';
 include get_stylesheet_directory() . '/lib/genesis/move-primary-nav.php';
+
+//* Include Advanced Custom Fields
+include get_stylesheet_directory() . '/lib/acf/acf-options.php';
