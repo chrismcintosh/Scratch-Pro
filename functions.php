@@ -2,9 +2,9 @@
 /**
  * Scratch Pro
  *
- * This file adds functions to the Bolt Pro Theme.
+ * This file adds functions to the Scratch Pro Theme.
  *
- * @package Bolt Pro
+ * @package Scratch Pro
  * @author  Chris Mcintosh
  * @license GPL-2.0+
  * @link    http://www.mcintosh.io
@@ -29,3 +29,5 @@ include get_stylesheet_directory() . '/lib/genesis/move-pagination.php';
 include get_stylesheet_directory() . '/lib/genesis/move-primary-nav.php';
 
 include get_stylesheet_directory() . '/lib/foundation-menu/index.php';
+//* Include Advanced Custom Fields
+include get_stylesheet_directory() . '/lib/acf/acf-options.php';

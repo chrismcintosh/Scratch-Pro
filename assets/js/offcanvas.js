@@ -34,7 +34,6 @@ export const offCanvasFunction = (offCanvasContent) => {
           function checkParentClick(e) {
                if (e.target !== this)
                     return;
-             
              toggleCloseCanvas()
           }
 
