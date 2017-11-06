@@ -11,7 +11,6 @@ COMPATIBILITY:
 # UnCSS will use these settings
 UNCSS_OPTIONS:
   ignore:
-    - !!js/regexp .foundation-mq
     - !!js/regexp ^\.is-.*
 
 # Gulp will reference these paths when it copies files
@@ -24,7 +23,7 @@ PATHS:
     - "!assets/{img,js,scss}/**/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
-    - "node_modules/susy/sass"
+    # - "node_modules/susy/sass"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
     - "assets/js/app.js"

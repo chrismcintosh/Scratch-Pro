@@ -27,3 +27,5 @@ include get_stylesheet_directory() . '/lib/genesis/breadcrumbs.php';
 include get_stylesheet_directory() . '/lib/genesis/blog-featured-image.php';
 include get_stylesheet_directory() . '/lib/genesis/move-pagination.php';
 include get_stylesheet_directory() . '/lib/genesis/move-primary-nav.php';
+
+include get_stylesheet_directory() . '/lib/foundation-menu/index.php';

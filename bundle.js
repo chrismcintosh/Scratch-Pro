@@ -63,11 +63,93 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+module.exports = jQuery;
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+     value: true
+});
+exports.offCanvasFunction = undefined;
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+window.$ = _jquery2.default;
+
+// Set Variables
+var offCanvas = document.querySelector(".off-canvas");
+var offCanvasContent = document.querySelector(".off-canvas-content");
+var offCanvasToggle = document.querySelector(".canvas-toggle");
+var closeOffCanvasToggle = document.querySelector(".close-canvas");
+
+var offCanvasFunction = exports.offCanvasFunction = function offCanvasFunction(offCanvasContent) {
+
+     // Define Functions
+
+     var OnTransitionEnd = function OnTransitionEnd() {
+          offCanvas.classList.remove("canvas--animatable");
+     };
+
+     var toggleOpenCanvas = function toggleOpenCanvas() {
+          offCanvas.classList.add("canvas--animatable");
+          console.log("toggle open canvas");
+          offCanvas.classList.add("canvas--visible");
+          // Add close canvas listeners
+          closeOffCanvasToggle.addEventListener("click", toggleCloseCanvas, false);
+          offCanvas.addEventListener('click', checkParentClick);
+     };
+
+     var toggleCloseCanvas = function toggleCloseCanvas() {
+          offCanvas.classList.add("canvas--animatable");
+          console.log("toggle close canvas");
+          offCanvas.classList.remove('canvas--visible');
+          removeOffCanvasListeners();
+     };
+
+     function checkParentClick(e) {
+          if (e.target !== this) return;
+
+          toggleCloseCanvas();
+     }
+
+     var removeOffCanvasListeners = function removeOffCanvasListeners() {
+          closeOffCanvasToggle.removeEventListener('click', toggleOpenCanvas);
+          offCanvas.removeEventListener('click', checkParentClick);
+          console.log("remove listeners");
+     };
+
+     document.onkeydown = function (e) {
+          e = e || window.event;
+          if (e.keyCode == 27 && offCanvas.classList.contains("canvas--visible")) {
+               //     alert('Esc key pressed.');
+               toggleCloseCanvas();
+          }
+     };
+
+     // Set Triggers
+     offCanvas.addEventListener("transitionend", OnTransitionEnd, false);
+     // Open Canvas
+     offCanvasToggle.addEventListener("click", toggleOpenCanvas, false);
+};
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -455,35 +537,33 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 	);
 });
 ;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = jQuery;
-
-/***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _jquery = __webpack_require__(1);
+var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _whatInput = __webpack_require__(0);
+var _whatInput = __webpack_require__(2);
 
 var _whatInput2 = _interopRequireDefault(_whatInput);
+
+var _offCanvas = __webpack_require__(1);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.$ = _jquery2.default;
 
+(0, _offCanvas.offCanvasFunction)();
+
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
