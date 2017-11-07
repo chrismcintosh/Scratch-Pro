@@ -16,7 +16,15 @@
 				flex-direction: column;
 				justify-content: center;
 			}
+
+			.header-left {
+				@media screen and (min-width: 1024px) {
+					width: 35%;
+				}
+			}
 		}
+
+
 
 		ul {
 			list-style-type: none;

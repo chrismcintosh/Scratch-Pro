@@ -17,6 +17,27 @@
 @import 'defaults/normalize-7-0-0';
 @import 'defaults/accessibility';
 @import 'defaults/defaults';
-@import 'components/menu';
+@import 'defaults/typography';
+@import 'components/site-header';
 @import 'components/offcanvas';
+@import 'components/footer';
+@import 'layouts/default';
+@import 'layouts/single';
 
+
+.featured-image {
+	margin-bottom: 24px;
+
+	img {
+		@include breakpoint(medium) {
+			object-fit: cover;
+			height: 380px;
+		}
+
+		@include breakpoint(large) {
+			height: 420px;
+		}
+
+	}
+
+}

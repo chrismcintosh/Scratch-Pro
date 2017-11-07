@@ -1,0 +1,9 @@
+body {
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+     font-size: $rootpx*2;
+     line-height: 1.775rem;
+}
+
+.entry-content p {
+     margin-bottom: $rootpx*5;
+}
