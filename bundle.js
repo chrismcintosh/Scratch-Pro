@@ -102,37 +102,37 @@ var offCanvasFunction = exports.offCanvasFunction = function offCanvasFunction(o
 
      // Define Functions
 
-     var OnTransitionEnd = function OnTransitionEnd() {
+     function OnTransitionEnd() {
           offCanvas.classList.remove("canvas--animatable");
-     };
+     }
 
-     var toggleOpenCanvas = function toggleOpenCanvas() {
+     function toggleOpenCanvas(offCanvasContent) {
           offCanvas.classList.add("canvas--animatable");
           console.log("toggle open canvas");
           offCanvas.classList.add("canvas--visible");
           // Add close canvas listeners
           closeOffCanvasToggle.addEventListener("click", toggleCloseCanvas, false);
           offCanvas.addEventListener('click', checkParentClick);
-     };
+          document.querySelector(".close-canvas").addEventListener("focusout", toggleCloseCanvas);
+     }
 
-     var toggleCloseCanvas = function toggleCloseCanvas() {
+     function toggleCloseCanvas() {
           offCanvas.classList.add("canvas--animatable");
           console.log("toggle close canvas");
           offCanvas.classList.remove('canvas--visible');
           removeOffCanvasListeners();
-     };
+     }
 
      function checkParentClick(e) {
           if (e.target !== this) return;
-
           toggleCloseCanvas();
      }
 
-     var removeOffCanvasListeners = function removeOffCanvasListeners() {
+     function removeOffCanvasListeners() {
           closeOffCanvasToggle.removeEventListener('click', toggleOpenCanvas);
           offCanvas.removeEventListener('click', checkParentClick);
           console.log("remove listeners");
-     };
+     }
 
      document.onkeydown = function (e) {
           e = e || window.event;
@@ -146,6 +146,7 @@ var offCanvasFunction = exports.offCanvasFunction = function offCanvasFunction(o
      offCanvas.addEventListener("transitionend", OnTransitionEnd, false);
      // Open Canvas
      offCanvasToggle.addEventListener("click", toggleOpenCanvas, false);
+     offCanvas.addEventListener("focusin", toggleOpenCanvas, false);
 };
 
 /***/ }),

@@ -30,10 +30,7 @@ function bolt_pro_do_primary_nav() { ?>
      
           <div class="header__wrap">
                <div class="header-left">
-                    <ul class="menu">
-                         <li class="menu-text"><?php do_action('foundation_site_title'); ?></li>
-                         
-                    </ul>
+                <?php do_action('foundation_site_title'); ?>
                </div>
                <div class="header-right">
                     <?php
@@ -63,21 +60,21 @@ function scratch_pro_off_canvas_open() {
 
 	<div class="off-canvas">
 		<div class="off-canvas-content">
-      <button class="close-canvas"><i class="fa fa-times" aria-hidden="true"></i></button>
     <?php
-                    wp_nav_menu(array(
-                         'container'	=> false,
-                         'menu' => 'Primary Navigation',
-                         'menu_class'	=> 'primary-menu',
-                         'theme_location' => 'primary-navigation',
-                         'before' => '',
-                         'after' => '',
-                         'link_before' => '',
-                         'link_after' => '',
-                         'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                         'walker'  => new Foundation_Walker()
-                    ));
-                    ?>
+      wp_nav_menu(array(
+            'container'	=> false,
+            'menu' => 'Primary Navigation',
+            'menu_class'	=> 'primary-menu',
+            'theme_location' => 'primary-navigation',
+            'before' => '',
+            'after' => '',
+            'link_before' => '',
+            'link_after' => '',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'walker'  => new Foundation_Walker()
+      ));
+      ?>
+      <button class="close-canvas"><i class="fa fa-times" aria-hidden="true"></i></button>
 		</div>
 	</div>
 

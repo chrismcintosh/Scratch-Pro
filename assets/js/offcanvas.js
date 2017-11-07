@@ -11,20 +11,21 @@ export const offCanvasFunction = (offCanvasContent) => {
     
      // Define Functions
 
-          const OnTransitionEnd = () => {
+          function OnTransitionEnd() {
                offCanvas.classList.remove("canvas--animatable")
           }
 
-          const toggleOpenCanvas = () => {
+          function toggleOpenCanvas(offCanvasContent) {
                offCanvas.classList.add("canvas--animatable")
                console.log("toggle open canvas")	
                offCanvas.classList.add("canvas--visible")
                // Add close canvas listeners
                     closeOffCanvasToggle.addEventListener("click", toggleCloseCanvas, false)
                     offCanvas.addEventListener('click', checkParentClick)
+                    document.querySelector(".close-canvas").addEventListener("focusout", toggleCloseCanvas)
           }
           
-          const toggleCloseCanvas = () => {
+          function toggleCloseCanvas() {
                offCanvas.classList.add("canvas--animatable")
                console.log("toggle close canvas")
                offCanvas.classList.remove('canvas--visible')
@@ -37,7 +38,7 @@ export const offCanvasFunction = (offCanvasContent) => {
              toggleCloseCanvas()
           }
 
-          const removeOffCanvasListeners = () => {
+          function removeOffCanvasListeners() {
                closeOffCanvasToggle.removeEventListener('click', toggleOpenCanvas)
                offCanvas.removeEventListener('click', checkParentClick)
                console.log("remove listeners")
@@ -50,11 +51,12 @@ export const offCanvasFunction = (offCanvasContent) => {
                toggleCloseCanvas()
                }
            };
-
      
      // Set Triggers
           offCanvas.addEventListener("transitionend", OnTransitionEnd, false)
           // Open Canvas
           offCanvasToggle.addEventListener("click", toggleOpenCanvas, false)
+          offCanvas.addEventListener("focusin", toggleOpenCanvas, false)
+          
 }
 
