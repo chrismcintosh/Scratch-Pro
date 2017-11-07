@@ -1,0 +1,17 @@
+.blog {
+
+     img {
+          max-width: 100%;
+          height: auto;
+     }
+
+     .content {
+          
+          @media screen and (min-width: 640px) {
+               display: grid;
+               grid-template-columns: 1fr 1fr 1fr;
+               grid-gap: $rootpx * 2;
+          }
+     }
+
+}
