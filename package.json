@@ -1,16 +1,15 @@
 {
-  "name": "foundation-zurb-template",
+  "name": "scratch-pro",
   "version": "1.0.0",
-  "description": "Official ZURB Template for Foundation for Sites.",
+  "description": "Genesis Framework Starter Theme.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "Chris Mcintosh",
   "license": "MIT",
   "dependencies": {
-    "foundation-sites": "^6.4.4-rc1",
     "jquery": ">=3.0.0",
     "what-input": "^4.1.3"
   },
