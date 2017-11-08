@@ -18,6 +18,7 @@
 @import 'defaults/accessibility';
 @import 'defaults/defaults';
 @import 'defaults/typography';
+
 @import 'layouts/default';
 @import 'layouts/single';
 @import 'layouts/blog';
@@ -28,8 +29,10 @@
 @import 'components/footer';
 
 // Advanced Custom Fields
-@import 'acf/hero';
+@import 'acf/blog-posts';
 @import 'acf/calltoaction';
+@import 'acf/events';
+@import 'acf/hero';
 @import 'acf/plan';
 
 .featured-image {

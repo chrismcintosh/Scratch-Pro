@@ -792,6 +792,113 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "5a032f81c7a98": {
+                    "key": "5a032f81c7a98",
+                    "name": "events_list",
+                    "label": "Events List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a032f89c7a99",
+                            "label": "Event Category",
+                            "name": "event_category",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "": "All Events",
+                                "music-events": "Music Events"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5a0330f5c7a9a",
+                            "label": "Number of Events",
+                            "name": "number_of_events",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5a033bd3ad7b4": {
+                    "key": "5a033bd3ad7b4",
+                    "name": "blog_posts",
+                    "label": "Blog Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a033cbdad7b5",
+                            "label": "Blog Category",
+                            "name": "blog_category",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": [],
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5a033ce4ad7b6",
+                            "label": "Blog Section Title",
+                            "name": "blog_section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Content",
@@ -819,5 +926,9 @@
     ],
     "active": 1,
     "description": "",
+<<<<<<< HEAD
     "modified": 1510163229
+=======
+    "modified": 1510161712
+>>>>>>> e124fa1ed010f576b42d2331ebcaecf2010db72c
 }

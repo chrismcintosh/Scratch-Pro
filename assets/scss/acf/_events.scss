@@ -1,0 +1,21 @@
+.event-list {
+     .wrap {
+          max-width: 1024px;
+          margin: 0 auto;
+          padding: 0 $rootpx;
+     }
+
+     .event-section-header {
+          display: flex;
+          justify-content: space-between;
+     }
+
+     .list {
+          display: grid;
+          grid-gap: $rootpx*2;
+
+          @media screen and (min-width: 768px) {
+               grid-template-columns: repeat(3, 1fr);
+          }
+     }
+}
