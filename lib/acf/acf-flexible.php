@@ -28,31 +28,35 @@ function scratch_pro_display_flexible_content() {
 		endwhile;
 }
 
-// Load event categories into select feild
-add_filter('acf/load_field/key=field_5a032f89c7a99', 'scratch_category_acf_select');
-function scratch_category_acf_select($field)
-{
-    $event_categories = get_terms(
-        array(
-            'taxonomy' => Tribe__Events__Main::TAXONOMY,
-            'hide_empty' => 1,
-        )
-    );
+// Is The Event Calendar installed?
+include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+if (is_plugin_active('plugins/the-events-calendar/the-events-calendar.php')) {
+		// Load event categories into select feild
+		add_filter('acf/load_field/key=field_5a032f89c7a99', 'scratch_category_acf_select');
+		function scratch_category_acf_select($field)
+		{
+		    $event_categories = get_terms(
+		        array(
+		            'taxonomy' => Tribe__Events__Main::TAXONOMY,
+		            'hide_empty' => 1,
+		        )
+		    );
 
-    $field['choices'][''] = 'All Events';
-    foreach ($event_categories as $event_category) {
-        // Grab parent category and check if it exists
-        $event_category_parent = get_term($event_category->parent, Tribe__Events__Main::TAXONOMY);
-        if (empty($event_category_parent->name)) {
-            $event_category_name = $event_category->name;
-        } else {
-            $event_category_name = $event_category_parent->name.'/'.$event_category->name;
-        }
-        // Pass slug and name to ACF choices
-        $field['choices'][$event_category->slug] = $event_category_name;
-    }
+		    $field['choices'][''] = 'All Events';
+		    foreach ($event_categories as $event_category) {
+		        // Grab parent category and check if it exists
+		        $event_category_parent = get_term($event_category->parent, Tribe__Events__Main::TAXONOMY);
+		        if (empty($event_category_parent->name)) {
+		            $event_category_name = $event_category->name;
+		        } else {
+		            $event_category_name = $event_category_parent->name.'/'.$event_category->name;
+		        }
+		        // Pass slug and name to ACF choices
+		        $field['choices'][$event_category->slug] = $event_category_name;
+		    }
 
-    return $field;
+		    return $field;
+		}
 }
 
 // Load event categories into select feild
