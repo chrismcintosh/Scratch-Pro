@@ -22,9 +22,6 @@
 @import 'layouts/default';
 @import 'layouts/single';
 @import 'layouts/blog';
-@import 'layouts/events';
-
-@import 'vendor/tribe-events';
 
 // Page Components
 @import 'components/site-header';
@@ -35,6 +32,7 @@
 @import 'acf/blog-posts';
 @import 'acf/calltoaction';
 @import 'acf/events';
+@import 'acf/features';
 @import 'acf/hero';
 @import 'acf/plan';
 
