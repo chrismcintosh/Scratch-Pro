@@ -1,31 +1,25 @@
-a {
-	color: $primary;
-	border-bottom: 1px dotted;
-	font-weight: 700;
-	text-decoration: none;
-     word-wrap: break-word;
-
-     &:hover {
-          color: lighten($black, 33);
-     }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: lighten($black, 11);
-	font-weight: 700;
-	line-height: 1.5;
-	margin: 0;
-	margin-bottom: 16px;
-	padding: 0;
-}
-
 body {
      font-size: $rootpx * 2;
+}
+
+a {
+		color: $primary;
+		border-bottom: 1px dotted;
+		font-weight: 700;
+		text-decoration: none;
+		word-wrap: break-word;
+
+		&:hover {
+		  color: lighten($black, 33);
+		}
+}
+
+h1, h2, h3, h4, h5, h6 {
+		font-weight: 700;
+		line-height: 1.5;
+		margin: 0;
+		margin-bottom: 16px;
+		padding: 0;
 }
 
 .cta {
