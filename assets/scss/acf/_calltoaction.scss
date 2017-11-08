@@ -63,9 +63,11 @@
     }
 
     .cta--secondary {
+        border-color: $white;
+        color: $white;
+
         &:hover, &:active, &:focus {
-            background: rgba(darken($light-gray, 50%), 0.75);
-            border-color: $light-gray;
+            border-color: $calltoaction-background-hover;
         }
     }
 }
