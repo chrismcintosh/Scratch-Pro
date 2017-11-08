@@ -6,15 +6,15 @@
             <p class="subheader"><?php the_sub_field('subheader') ?></p>
 
             <div class="hero__calltoaction">
-                <?php if(the_field('primary_call_to_action', 'option')) { ?>
+                <?php if(get_field('secondary_call_to_action', 'option')) { ?>
                     <a href="<?php the_field('secondary_call_to_action_url', 'option'); ?>" class="cta--secondary">
                         <?php the_field('secondary_call_to_action_text', 'option'); ?>
                     </a>
                 <?php } ?>
 
-                <?php if(the_field('primary_call_to_action', 'option')) { ?>
+                <?php if(get_field('primary_call_to_action', 'option')) { ?>
                     <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta">
-                        <?php the_field('secondary_call_to_action_text', 'option'); ?>
+                        <?php the_field('primary_call_to_action_text', 'option'); ?>
                     </a>
                 <?php } ?>
             </div>
