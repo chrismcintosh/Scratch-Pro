@@ -1,0 +1,71 @@
+.calltoaction {
+    align-items: center;
+    background-color: $primary;
+
+    @include breakpoint(medium down) {
+        text-align: center;
+    }
+}
+
+.calltoaction__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @include breakpoint(large) {
+        align-items: center;
+        display: flex;
+        padding: 7rem 0;
+    }
+}
+
+.calltoaction__text {
+    margin-bottom: 1rem;
+
+    @include breakpoint(medium) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: 0;
+    }
+
+    h2{
+        color: $white;
+    }
+
+    p.subheader {
+        color: $light-gray;
+        font-size: 1.25rem;
+    }
+}
+
+.calltoaction__buttons {
+    @include breakpoint(large) {
+        text-align: right;
+    }
+
+    a {
+        @include breakpoint(small only) {
+            display: block;
+        }
+    }
+
+    .cta {
+        margin-top: 1rem;
+
+        @include breakpoint(medium) {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .cta--secondary {
+        &:hover, &:active, &:focus {
+            background: rgba(darken($light-gray, 50%), 0.75);
+            border-color: $light-gray;
+        }
+    }
+}
