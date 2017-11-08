@@ -13,7 +13,7 @@
                 <?php } ?>
 
                 <?php if(get_field('primary_call_to_action', 'option')) { ?>
-                    <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta">
+                    <a href="<?php the_field('primary_call_to_action_url', 'option'); ?>" class="cta--primary">
                         <?php the_field('primary_call_to_action_text', 'option'); ?>
                     </a>
                 <?php } ?>

@@ -4,7 +4,7 @@ a {
 	font-weight: 700;
 	text-decoration: none;
      word-wrap: break-word;
-     
+
      &:hover {
           color: lighten($black, 33);
      }
@@ -26,4 +26,54 @@ h6 {
 
 body {
      font-size: $rootpx * 2;
+}
+
+.cta {
+    border: 2px solid transparent;
+    display: inline-block;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+		text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:active, &:focus {
+        box-shadow: 0 4px 4px 0 rgba($black, 0.3);
+    }
+}
+
+.cta--primary {
+		@extend .cta;
+		background-color: $calltoaction-background;
+		border: 2px solid $calltoaction-background;
+    color: $white;
+
+		&:hover, &:active, &:focus {
+				background: $calltoaction-background-hover;
+				border-color: $calltoaction-background-hover;
+				color: $white;
+		}
+}
+
+.cta--secondary {
+    @extend .cta;
+    border-color: $calltoaction-background;
+		color: $calltoaction-background;
+
+    &:hover, &:active, &:focus {
+        background: $calltoaction-background-hover;
+        border-color: $calltoaction-background-hover;
+        color: $white;
+    }
+}
+
+.cta--action {
+		@extend .cta;
+		border-bottom-color: $calltoaction-background;
+		color: $calltoaction-background;
+
+		&:hover, &:active, &:focus {
+				border-bottom-color: $calltoaction-background-hover;
+				box-shadow: none;
+				color: $calltoaction-background;
+		}
 }

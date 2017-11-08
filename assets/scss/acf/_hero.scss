@@ -7,6 +7,12 @@
 
     .cta--secondary {
         margin-left: 0;
+        color: $white;
+        border-color: $white;
+
+        &:hover, &:active, &:focus {
+            border-color: $calltoaction-background-hover;
+        }
     }
 }
 
@@ -48,6 +54,7 @@
     }
 
     .subheader {
+        color: $light-gray;
         font-size: 1.25rem;
 
         @include breakpoint(medium) {
