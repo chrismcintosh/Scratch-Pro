@@ -18,6 +18,7 @@
 @import 'defaults/accessibility';
 @import 'defaults/defaults';
 @import 'defaults/typography';
+
 @import 'layouts/default';
 @import 'layouts/single';
 @import 'layouts/blog';
@@ -30,6 +31,8 @@
 // Advanced Custom Fields
 @import 'acf/hero';
 @import 'acf/calltoaction';
+@import 'acf/events';
+@import 'acf/blog-posts';
 
 .featured-image {
 	margin-bottom: 24px;

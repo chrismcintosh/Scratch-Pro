@@ -1,6 +1,7 @@
 .page-template-default,
 .post-template-default,
-.blog {
+.blog,
+.post-type-archive-tribe_events {
      .site-container {
           display: grid;
           grid-template-columns: repeat(12, 1fr);
