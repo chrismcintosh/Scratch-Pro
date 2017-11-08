@@ -6,10 +6,6 @@
 * Content field group.
 */
 
-// Hook into the header and display Flexible Content
-add_action( 'get_header', 'scratch_flexible_content_check' );
-
-function scratch_flexible_content_check() {
-}
+add_action( 'genesis_before_loop', 'scratch_pro_display_flexible_content' );
 
 genesis();

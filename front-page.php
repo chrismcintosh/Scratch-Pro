@@ -7,6 +7,7 @@
  * @author  Chris Mcintosh
  * @license GPL-2.0+
  */
+
 add_action( 'genesis_meta', 'scratch_pro_homepage_setup' );
 function scratch_pro_homepage_setup() {
 	// Full width layout.
@@ -14,4 +15,8 @@ function scratch_pro_homepage_setup() {
 	// Remove standard loop and replace with loop showing Posts, not Page content.
 	remove_action( 'genesis_loop', 'genesis_do_loop' );
 }
+
+// Display Flexible Content
+add_action( 'genesis_before_loop', 'scratch_pro_display_flexible_content' );
+
 genesis();

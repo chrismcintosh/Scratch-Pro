@@ -1,0 +1,82 @@
+.hero {
+    .cta {
+        @include breakpoint(medium) {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .cta--secondary {
+        margin-left: 0;
+    }
+}
+
+.hero__wrap {
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    height: 70vh;
+    max-height: 50rem;
+    min-height: 30rem;
+
+    @include breakpoint(large) {
+        height: 75vh;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .hero {
+        background-position: center center;
+    }
+}
+
+.hero__content {
+    margin: 0 auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+
+    @include breakpoint(large) {
+        padding-left: 55%;
+        padding-right: 15%;
+        text-align: left;
+    }
+
+    h1 {
+        color: #fff;
+        font-weight: 900;
+    }
+
+    .subheader {
+        font-size: 1.25rem;
+
+        @include breakpoint(medium) {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.hero__calltoaction {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint(medium) {
+        margin-top: 3rem;
+    }
+
+    @include breakpoint(large) {
+        text-align: left;
+    }
+
+    a {
+        font-size: 1.1rem;
+
+        @include breakpoint(small only) {
+            display: block;
+            font-size: 1rem;
+            margin-top: 1rem;
+            padding: 0.75rem;
+        }
+    }
+}
