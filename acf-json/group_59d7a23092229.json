@@ -436,8 +436,8 @@
                     "sub_fields": [
                         {
                             "key": "field_59d7de2918d49",
-                            "label": "Plan Headline",
-                            "name": "plan_headline",
+                            "label": "Header",
+                            "name": "header",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -447,7 +447,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "It's easy to turn your lawn into a gem.",
+                            "default_value": "Provide a step by step plan.",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -455,8 +455,8 @@
                         },
                         {
                             "key": "field_59d7de7a18d4a",
-                            "label": "Plan Subheader",
-                            "name": "plan_subheader",
+                            "label": "Subheader",
+                            "name": "subheader",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -466,7 +466,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "Follow the steps to a better looking lawn.",
+                            "default_value": "Make sure it's not too long. Just a summary of the major steps.",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -486,8 +486,8 @@
                                 "id": ""
                             },
                             "collapsed": "",
-                            "min": 1,
-                            "max": 0,
+                            "min": 2,
+                            "max": 5,
                             "layout": "table",
                             "button_label": "Add Step",
                             "sub_fields": [
@@ -504,7 +504,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "X. Take Action",
                                     "placeholder": "X. Action Text Here",
                                     "prepend": "",
                                     "append": "",
@@ -523,7 +523,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Elaborate a little bit, with information about why this plan works.",
                                     "placeholder": "Description of the action...",
                                     "prepend": "",
                                     "append": "",
@@ -543,7 +543,7 @@
                                         "id": ""
                                     },
                                     "default_value": "fa-flag",
-                                    "placeholder": "",
+                                    "placeholder": "fa-flag",
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
@@ -819,5 +819,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1510157808
+    "modified": 1510163229
 }
