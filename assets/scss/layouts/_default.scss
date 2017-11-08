@@ -1,0 +1,35 @@
+.page-template-default,
+.post-template-default,
+.blog {
+     .site-container {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: auto;
+     }
+     .site-header {
+          grid-column-end: span 12;
+     }
+     .site-inner {
+          padding: 20px $rootpx;
+          grid-column-start: 1;
+          grid-column-end: span 12;
+
+          @media screen and (min-width: 768px) {
+               padding: 60px $rootpx;
+               grid-column-start: 2;
+               grid-column-end: span 10;
+          }
+
+          @media screen and (min-width: 1024px) {
+               padding: 60px $rootpx;
+               grid-column-start: 3;
+               grid-column-end: span 8;
+          }
+     }
+     .footer-widgets {
+          grid-column-end: span 12;
+     }
+     .site-footer {
+          grid-column-end: span 12;
+     }
+}

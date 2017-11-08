@@ -17,9 +17,33 @@
 @import 'defaults/normalize-7-0-0';
 @import 'defaults/accessibility';
 @import 'defaults/defaults';
+@import 'defaults/typography';
+@import 'layouts/default';
+@import 'layouts/single';
+@import 'layouts/blog';
 
 // Page Components
-@import 'components/menu';
+@import 'components/site-header';
+@import 'components/offcanvas';
+@import 'components/footer';
 
 // Advanced Custom Fields
 @import 'acf/hero';
+
+
+.featured-image {
+	margin-bottom: 24px;
+
+	img {
+		@include breakpoint(medium) {
+			object-fit: cover;
+			height: 380px;
+		}
+
+		@include breakpoint(large) {
+			height: 420px;
+		}
+
+	}
+
+}
