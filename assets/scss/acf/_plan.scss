@@ -2,6 +2,8 @@ $plan-bg: $light-gray;
 $plan-divider-color: $medium-gray;
 
 .plan {
+    padding: 3rem 0;
+
     @include breakpoint(small-only) {
         padding: 1rem;
     }
@@ -13,6 +15,10 @@ $plan-divider-color: $medium-gray;
     margin: 0 auto;
     max-width: 90rem;
     text-align: center;
+
+    h1, p {
+        margin: 0;
+    }
 }
 
 .plan__inner {
@@ -23,7 +29,7 @@ $plan-divider-color: $medium-gray;
     text-align: center;
 
     @include breakpoint(medium) {
-        padding: 2rem;
+        padding: 3rem 0 4rem;
         text-align: left;
     }
 
@@ -52,7 +58,7 @@ $plan-divider-color: $medium-gray;
 
     @include breakpoint(medium) {
         flex: 1 0 25%;
-        padding: 2rem;
+        padding: 0 2rem;
         justify-content: flex-start;
         flex-direction: row;
     }
