@@ -8,16 +8,17 @@
 }
 
 .calltoaction__container {
+    display: grid;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 3rem 0;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    padding: 3rem 1rem;
+    text-align: center;
 
     @include breakpoint(large) {
         align-items: center;
-        display: flex;
-        padding: 7rem 0;
+        grid-template-columns: 2fr 1fr;
+        padding: 5rem 0;
+        text-align: left;
     }
 }
 
