@@ -1,0 +1,74 @@
+.calltoaction {
+    align-items: center;
+    background-color: $primary;
+
+    @include breakpoint(medium down) {
+        text-align: center;
+    }
+}
+
+.calltoaction__container {
+    display: grid;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    @include breakpoint(large) {
+        align-items: center;
+        grid-template-columns: 2fr 1fr;
+        padding: 5rem 0;
+        text-align: left;
+    }
+}
+
+.calltoaction__text {
+    margin-bottom: 1rem;
+
+    @include breakpoint(medium) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
+        margin-bottom: 0;
+    }
+
+    h2{
+        color: $white;
+    }
+
+    p.subheader {
+        color: $light-gray;
+        font-size: 1.25rem;
+    }
+}
+
+.calltoaction__buttons {
+    @include breakpoint(large) {
+        text-align: right;
+    }
+
+    a {
+        @include breakpoint(small only) {
+            display: block;
+        }
+    }
+
+    .cta {
+        margin-top: 1rem;
+
+        @include breakpoint(medium) {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    .cta--secondary {
+        border-color: $white;
+        color: $white;
+
+        &:hover, &:active, &:focus {
+            border-color: $calltoaction-background-hover;
+        }
+    }
+}

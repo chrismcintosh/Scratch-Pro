@@ -1,0 +1,26 @@
+.blog-posts {
+     .wrap {
+          max-width: 1024px;
+          margin: 0 auto;
+          padding: $rootpx*2;
+     }
+}
+
+.blog-section-header {
+     display: flex;
+     justify-content: space-between;
+}
+
+.article-container {
+     display: grid;
+     grid-gap: $rootpx*3;
+
+     @media screen and (min-width: 768px) {
+          grid-template-columns: repeat(3, 1fr);
+     }
+}
+
+.article-image {
+     min-height: 160px;
+     background-size: cover !important;
+}

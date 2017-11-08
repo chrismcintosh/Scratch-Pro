@@ -10,8 +10,10 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 
 /* Color Scheme */
-$primary: $blue;
+$primary: #333;
 $header-background: $light-gray;
+$calltoaction-background: darken($primary, 15%);
+$calltoaction-background-hover: lighten($primary, 15%);
 
 /* Breakpoints */
 $small: 0;
@@ -24,26 +26,38 @@ $xxlarge: 1440px;
     @if $point == xxlarge {
         @media screen and (min-width: $xxlarge) { @content ; }
     }
-    @if $point == xlarge only {
-        @media screen and (min-width: $xlarge) and (max-width: ($xxlarge - 1px)) { @content ; }
-    }
     @else if $point == xlarge {
         @media screen and (min-width: $xlarge) { @content ; }
     }
-    @else if $point == large only {
-        @media screen and (min-width: $large) and (max-width: ($xlarge - 1px)) { @content ; }
+    @else if $point == xlarge-down {
+        @media screen and (max-width: ($xxlarge - 1px)) { @content ; }
+    }
+    @else if $point == xlarge-only {
+        @media screen and (min-width: $xlarge) and (max-width: ($xxlarge - 1px)) { @content ; }
     }
     @else if $point == large {
         @media screen and (min-width: $large) { @content ; }
     }
-    @else if $point == medium only {
-        @media screen and (min-width: $medium) and (max-width: ($large - 1px)) { @content ; }
+    @else if $point == large-down {
+        @media screen and (max-width: ($xlarge - 1px)) { @content ; }
+    }
+    @else if $point == large-only {
+        @media screen and (min-width: $large) and (max-width: ($xlarge - 1px)) { @content ; }
     }
     @else if $point == medium {
         @media screen and (min-width: $medium) { @content ; }
     }
-    @else if $point == small only {
-        @media screen and (max-width: ($small - 1px)) { @content ; }
+    @else if $point == medium-down {
+        @media screen and (max-width: ($large - 1px)) { @content ; }
+    }
+    @else if $point == medium-only {
+        @media screen and (min-width: $medium) and (max-width: ($large - 1px)) { @content ; }
+    }
+    @else if $point == small-only or $point == small-down {
+        @media screen and (max-width: ($medium - 1px)) { @content ; }
+    }
+    @else {
+        @media screen and (min-width: $point) { @content ; }
     }
 }
 

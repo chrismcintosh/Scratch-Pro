@@ -18,9 +18,7 @@
 @import 'defaults/accessibility';
 @import 'defaults/defaults';
 @import 'defaults/typography';
-@import 'components/site-header';
-@import 'components/offcanvas';
-@import 'components/footer';
+
 @import 'layouts/default';
 @import 'layouts/single';
 @import 'layouts/blog';
@@ -28,6 +26,17 @@
 
 @import 'vendor/tribe-events';
 
+// Page Components
+@import 'components/site-header';
+@import 'components/offcanvas';
+@import 'components/footer';
+
+// Advanced Custom Fields
+@import 'acf/blog-posts';
+@import 'acf/calltoaction';
+@import 'acf/events';
+@import 'acf/hero';
+@import 'acf/plan';
 
 .featured-image {
 	margin-bottom: 24px;
