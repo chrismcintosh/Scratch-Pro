@@ -395,6 +395,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5a049f107e3d7",
+                            "label": "Header",
+                            "name": "header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Upcoming Events",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5a032f89c7a99",
                             "label": "Event Category",
                             "name": "event_category",
@@ -408,8 +427,8 @@
                                 "id": ""
                             },
                             "choices": {
-                                "": "All Events",
-                                "music-events": "Music Events"
+                                "music-events": "Music Events",
+                                "": "All Events"
                             },
                             "default_value": [],
                             "allow_null": 0,
@@ -425,7 +444,7 @@
                             "name": "number_of_events",
                             "type": "number",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -451,6 +470,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5a033ce4ad7b6",
+                            "label": "Header",
+                            "name": "header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Latest News",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5a033cbdad7b5",
                             "label": "Blog Category",
                             "name": "blog_category",
@@ -463,7 +501,10 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "choices": [],
+                            "choices": {
+                                "uncategorized": "Uncategorized",
+                                "": "All Posts"
+                            },
                             "default_value": [],
                             "allow_null": 0,
                             "multiple": 0,
@@ -471,25 +512,6 @@
                             "ajax": 0,
                             "return_format": "value",
                             "placeholder": ""
-                        },
-                        {
-                            "key": "field_5a033ce4ad7b6",
-                            "label": "Blog Section Title",
-                            "name": "blog_section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -521,5 +543,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1510172474
+    "modified": 1510252442
 }

@@ -12,44 +12,42 @@
 
      <section class="blog-posts">
           <div class="wrap">
+
                <div class="blog-section-header">
-                    <div class="left">
-                         <h2><?php the_sub_field('blog_section_title'); ?></h2>
-                    </div>
-                    <div class="right">
-                         <?php if ($news_category === '') { ?>
-                              <a href="/news/">All Posts</a>
-                         <?php } else { ?>
-                         <a href="/category/<?php echo $selected_category; ?>">More Posts Like This</a>
-                         <?php } ?>
-                    </div>
+                   <h1><?php the_sub_field('header'); ?></h1>
                </div>
 
-               <div class="article-container">
+               <div class="article__container">
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                              <div class="article">
-          					<div class="inner">
-          	                         <a href="<?php the_permalink(); ?>">
-                                             <?php if ( has_post_thumbnail() ) : ?>
-                                                  <div class="article-image" style="background: url('<?php the_post_thumbnail_url('large'); ?>')"></div>
-                                             <?php endif; ?>
-                                             <div class="article-info">
-                                                  <div class="article-title">
-                                                       <h3><?php the_title(); ?></h3>
-                                                  </div>
-                                                  <div class="article-author">
-                                                       <span><?php the_author(); ?></span>
-                                                  </div>
-                                                  <div class="article-date">
-                                                       <span><?php the_date('M j Y'); ?></span>
-                                                  </div>
-                                             </div>
-          						</a>
-          	                         </a>
-          					</div>
-                              </div>
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="article" style="background: url('<?php the_post_thumbnail_url('large'); ?>')">
+                    <?php else: ?>
+                        <div class="article">
+                    <?php endif; ?>
+                    <div class="inner">
+                               <a href="<?php the_permalink(); ?>">
+                                   <div class="article__info">
+                                        <div class="article__title">
+                                             <h3><?php the_title(); ?></h3>
+                                        </div>
+                                        <div class="article__details">
+                                             <span><?php the_author(); ?> - <i><?php the_date('M j Y'); ?></i></span>
+                                        </div>
+                                   </div>
+                                </a>
+                    </div>
+                        </div>
                     <?php endwhile; ?>
                </div>
+
+               <div class="blog-posts__more">
+                    <?php if ($news_category === '') { ?>
+                         <a href="/news/" class="cta--action">All Posts</a>
+                    <?php } else { ?>
+                    <a href="/category/<?php echo $selected_category; ?>" class="cta--action">View More News</a>
+                    <?php } ?>
+               </div>
+
           </div>
      </section>
 
