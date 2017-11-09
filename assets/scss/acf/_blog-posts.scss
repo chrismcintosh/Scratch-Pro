@@ -71,6 +71,7 @@
 }
 
 .blog-posts__more {
+    margin-top: 1rem;
     text-align: center;
 
     @include breakpoint(medium) {
