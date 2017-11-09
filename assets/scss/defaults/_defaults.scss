@@ -69,5 +69,16 @@ h1, h2, h3, h4, h5, h6 {
 				border-bottom-color: $calltoaction-background-hover;
 				box-shadow: none;
 				color: $calltoaction-background;
+
+        &:after {
+            padding-left: 12px;
+        }
 		}
+
+    &:after {
+        content: '';
+        font-family: FontAwesome;
+        padding-left: 8px;
+        transition: 0.1s padding-left linear;
+    }
 }
