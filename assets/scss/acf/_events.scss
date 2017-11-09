@@ -1,21 +1,48 @@
 .event-list {
-     .wrap {
-          max-width: 1024px;
-          margin: 0 auto;
-          padding: 0 $rootpx;
-     }
+    background: $primary;
+    color: $white;
+    padding: 3rem 0;
 
-     .event-section-header {
-          display: flex;
-          justify-content: space-between;
-     }
+    h1 {
+        color: $white;
+    }
 
-     .list {
-          display: grid;
-          grid-gap: $rootpx*2;
+    a {
+        color: $white;
 
-          @media screen and (min-width: 768px) {
-               grid-template-columns: repeat(3, 1fr);
-          }
-     }
+        &:hover, &:active, &:focus {
+            color: $medium-gray;
+        }
+    }
+
+    .wrap {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 $rootpx;
+    }
+
+    .event-section-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list {
+        display: grid;
+        grid-gap: $rootpx*2;
+
+        @include breakpoint(768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.event {
+    a {
+        color: $light-gray;
+        font-weight: normal;
+    }
+}
+
+.event-title {
+    font-weight: bold;
 }

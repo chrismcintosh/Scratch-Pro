@@ -18,7 +18,7 @@ $events = tribe_get_events( array(
 
           <div class="event-section-header">
                <div class="left">
-                    <h2>Upcoming Events</h2>
+                    <h1><?php the_sub_field('header'); ?></h1>
                </div>
                <div class="right">
                     <?php if ($selected_category === '') { ?>
@@ -40,7 +40,7 @@ $events = tribe_get_events( array(
                          <div class="event">
                                <a href="<?php the_permalink( $event ); ?>">
                                    <div class="inner">
-                                        <div class="action-title">
+                                        <div class="event-title">
                                              <?php echo get_the_title( $event ); ?>
                                         </div>
                                         <div class="action-description">
