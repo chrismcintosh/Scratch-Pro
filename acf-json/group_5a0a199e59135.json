@@ -1,0 +1,120 @@
+{
+    "key": "group_5a0a199e59135",
+    "title": "Footer",
+    "fields": [
+        {
+            "key": "field_5a0a1aedca5ca",
+            "label": "Display Designer Info?",
+            "name": "display_designer_info",
+            "type": "true_false",
+            "instructions": "Displays credits to the web designer in the footer of the website.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5a0a19c245889",
+            "label": "Designer Name",
+            "name": "designer_name",
+            "type": "text",
+            "instructions": "The website designer name to place at the bottom of the website.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a0a1aedca5ca",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Mcintosh Digital",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a0a19f74588a",
+            "label": "Designer URL",
+            "name": "designer_url",
+            "type": "url",
+            "instructions": "The website designer URL to link at the bottom of the website.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a0a1aedca5ca",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/mcintosh.io\/",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a0a1c43ca5cb",
+            "label": "Display Theme Info?",
+            "name": "display_theme_info",
+            "type": "true_false",
+            "instructions": "Displays a link to Scratch Pro on GitHub.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "scratch-pro-settings"
+            }
+        ],
+        [
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "administrator"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1510614371
+}

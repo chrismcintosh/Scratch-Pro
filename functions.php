@@ -21,14 +21,16 @@ include get_stylesheet_directory() . '/lib/enqueue-scripts.php';
 include get_stylesheet_directory() . '/lib/suggested-plugins/suggested-plugins.php';
 
 //* Include Genesis Specific Modifications
-include get_stylesheet_directory() . '/lib/genesis/theme-support.php';
-include get_stylesheet_directory() . '/lib/genesis/inline-title-logo.php';
 include get_stylesheet_directory() . '/lib/genesis/breadcrumbs.php';
 include get_stylesheet_directory() . '/lib/genesis/blog-featured-image.php';
+include get_stylesheet_directory() . '/lib/genesis/footer-credits.php';
+include get_stylesheet_directory() . '/lib/genesis/inline-title-logo.php';
 include get_stylesheet_directory() . '/lib/genesis/move-pagination.php';
 include get_stylesheet_directory() . '/lib/genesis/move-primary-nav.php';
+include get_stylesheet_directory() . '/lib/genesis/theme-support.php';
 
 include get_stylesheet_directory() . '/lib/foundation-menu/index.php';
+
 //* Include Advanced Custom Fields
 include get_stylesheet_directory() . '/lib/acf/acf-flexible.php';
 include get_stylesheet_directory() . '/lib/acf/acf-options.php';
