@@ -53,6 +53,12 @@ function scratch_pro_register_required_plugins() {
 		),
 
 		array(
+			'name'     				=> 'Smush Image Compression and Optimization', // The plugin name.
+			'slug'     				=> 'wp-smushit', // The plugin slug (typically the folder name).
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
+		),
+
+		array(
 			'name'     				=> 'The Events Calendar', // The plugin name.
 			'slug'     				=> 'the-events-calendar', // The plugin slug (typically the folder name).
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required.
