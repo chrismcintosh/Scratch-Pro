@@ -38,15 +38,8 @@
 
 .hero__content {
     margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    max-width: 900px;
     text-align: center;
-
-    @include breakpoint(large) {
-        padding-left: 55%;
-        padding-right: 15%;
-        text-align: left;
-    }
 
     h1 {
         color: #fff;
