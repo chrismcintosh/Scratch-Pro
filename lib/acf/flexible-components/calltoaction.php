@@ -2,7 +2,7 @@
     <div class="calltoaction__container">
 
         <div class="calltoaction__text">
-            <h2><?php the_sub_field('headline') ?></h2>
+            <h2><?php the_sub_field('header') ?></h2>
             <p class="subheader"><?php the_sub_field('description') ?></p>
         </div>
 
