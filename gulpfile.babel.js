@@ -30,7 +30,7 @@ function loadConfig() {
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
-  gulp.series(server, watch));
+  gulp.series(sass, javascript, server, watch));
 
 gulp.task('build',
   gulp.series(gulp.parallel(sass, javascript)));
