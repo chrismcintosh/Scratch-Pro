@@ -1,58 +1,58 @@
 {
-  "name": "scratch-pro",
-  "version": "1.0.0",
-  "description": "Genesis Framework Starter Theme.",
-  "main": "gulpfile.js",
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp build --production"
-  },
-  "author": "Chris Mcintosh",
-  "license": "MIT",
-  "dependencies": {
-    "jquery": ">=3.0.0",
-    "what-input": "^4.1.3"
-  },
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^6.4.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-register": "^6.7.2",
-    "browser-sync": "^2.10.0",
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-clean-css": "^3.3.1",
-    "gulp-cli": "^1.2.1",
-    "gulp-concat": "^2.5.2",
-    "gulp-extname": "^0.2.0",
-    "gulp-if": "^2.0.0",
-    "gulp-imagemin": "^2.2.1",
-    "gulp-load-plugins": "^1.1.0",
-    "gulp-sass": "^2.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.2.0",
-    "gulp-uncss": "^1.0.1",
-    "js-yaml": "^3.4.6",
-    "panini": "^1.3.0",
-    "rimraf": "^2.4.3",
-    "style-sherpa": "^1.0.0",
-    "vinyl-named": "^1.1.0",
-    "webpack": "^2.6.1",
-    "webpack-stream": "^3.2.0",
-    "yargs": "^3.8.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zurb/foundation-zurb-template.git"
-  },
-  "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
-  },
-  "babel": {
+    "name": "scratch-pro",
+    "version": "0.0.2",
+    "description": "Genesis Framework Starter Theme.",
+    "main": "gulpfile.js",
+    "scripts": {
+        "start": "gulp",
+        "build": "gulp build --production"
+    },
+    "author": "Chris Mcintosh",
+    "license": "MIT",
+    "dependencies": {
+        "gulp-postcss": "^8.0.0",
+        "jquery": ">=3.0.0",
+        "what-input": "^5.1.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
+        "@babel/register": "^7.0.0",
+        "babel-loader": "^8.0.4",
+        "browser-sync": "^2.26.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^3.3.1",
+        "gulp-cli": "^2.0.1",
+        "gulp-concat": "^2.5.2",
+        "gulp-extname": "^0.2.0",
+        "gulp-if": "^2.0.0",
+        "gulp-imagemin": "^4.1.0",
+        "gulp-load-plugins": "^1.1.0",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.1",
+        "js-yaml": "^3.4.6",
+        "panini": "^1.3.0",
+        "rimraf": "^2.4.3",
+        "style-sherpa": "^1.0.0",
+        "vinyl-named": "^1.1.0",
+        "webpack": "^4.20.2",
+        "webpack-stream": "^5.1.1",
+        "yargs": "^12.0.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zurb/foundation-zurb-template.git"
+    },
+    "bugs": {
+        "url": "https://github.com/zurb/foundation-sites/issues",
+        "email": "foundation@zurb.com"
+    },
+    "babel": {
         "compact": false,
-    "presets": [
+        "presets": [
             [
                 "@babel/preset-env",
                 {
@@ -62,7 +62,7 @@
                     }
                 }
             ]
-    ]
-  },
-  "private": true
+        ]
+    },
+    "private": true
 }
