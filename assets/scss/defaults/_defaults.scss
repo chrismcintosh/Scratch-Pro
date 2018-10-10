@@ -39,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta--primary {
-    @extend .cta;
     background-color: $calltoaction-background;
     border: 2px solid $calltoaction-background;
     color: $white;
@@ -54,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta--secondary {
-    @extend .cta;
     border-color: $calltoaction-background;
     color: $calltoaction-background;
 
@@ -68,7 +66,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta--action {
-    @extend .cta;
     border-bottom-color: $calltoaction-background;
     color: $calltoaction-background;
 
