@@ -8,7 +8,7 @@
         <?php if( have_rows('features') ): while ( have_rows('features') ) : the_row(); ?>
 
             <div class="features__item">
-                <i class="fa <?php the_sub_field('icon'); ?>" aria-hidden="true"></i>
+                <i class="<?php the_sub_field('icon_style'); ?> fa-<?php the_sub_field('icon'); ?>"></i>
                 <div>
                     <p class="item__title"><?php the_sub_field('title'); ?></p>
                     <p class="item__desc"><?php the_sub_field('description'); ?></p>

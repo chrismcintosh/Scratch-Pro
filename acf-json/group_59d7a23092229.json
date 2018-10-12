@@ -190,11 +190,11 @@
                                     "maxlength": ""
                                 },
                                 {
-                                    "key": "field_59d7c207ae148",
-                                    "label": "Icon",
-                                    "name": "icon",
-                                    "type": "text",
-                                    "instructions": "Enter an icon name from http:\/\/fontawesome.io\/icons\/. Example: \"fa-flag\"",
+                                    "key": "field_5bc0f9ac9cd6e",
+                                    "label": "Icon Style",
+                                    "name": "icon_style",
+                                    "type": "select",
+                                    "instructions": "",
                                     "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -202,8 +202,34 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "fa-flag",
-                                    "placeholder": "fa-flag",
+                                    "choices": {
+                                        "fas": "Solid",
+                                        "far": "Regular",
+                                        "fal": "Light"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_59d7c207ae148",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "type": "text",
+                                    "instructions": "Enter an icon name from https:\/\/fontawesome.com\/icons\/. Example: \"flag\"",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "flag",
+                                    "placeholder": "flag",
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
@@ -320,7 +346,7 @@
                                     "label": "Icon",
                                     "name": "icon",
                                     "type": "text",
-                                    "instructions": "Enter an icon name from http:\/\/fontawesome.io\/icons\/. Example: \"fa-flag\"",
+                                    "instructions": "Enter an icon name from https:\/\/fontawesome.com\/icons\/. Example: \"flag\"",
                                     "required": 1,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -328,8 +354,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "fa-flag",
-                                    "placeholder": "fa-flag",
+                                    "default_value": "flag",
+                                    "placeholder": "flag",
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
@@ -543,5 +569,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1510252442
+    "modified": 1539373621
 }
