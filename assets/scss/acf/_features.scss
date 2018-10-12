@@ -29,14 +29,14 @@
         text-align: left;
     }
 
-    .fa {
+    svg {
         color: $primary;
         font-size: 3rem;
         margin: 0 auto;
         padding: 1rem;
 
         @include breakpoint(medium) {
-            font-size: 2rem;
+            font-size: 4rem;
             margin-right: 1.25rem;
             padding: 0;
         }
