@@ -27,7 +27,7 @@ ADD FOUNDATION FEATURES TO WORDPRESS
 add_action('genesis_header', 'bolt_pro_do_primary_nav');
 function bolt_pro_do_primary_nav() { ?>
 
-     
+
           <div class="header__wrap">
                <div class="header-left">
                 <?php do_action('foundation_site_title'); ?>
@@ -47,7 +47,7 @@ function bolt_pro_do_primary_nav() { ?>
                          'walker'  => new Foundation_Walker()
                     ));
                     ?>
-                    <button type="button" class="canvas-toggle" data-toggle><i class="fa fa-bars" aria-hidden="true"></i> MENU</button>
+                    <button type="button" class="canvas-toggle" data-toggle><i class="fas fa-bars" aria-hidden="true"></i> MENU</button>
                </div>
           </div>
 
@@ -74,7 +74,7 @@ function scratch_pro_off_canvas_open() {
             'walker'  => new Foundation_Walker()
       ));
       ?>
-      <button class="close-canvas"><i class="fa fa-times" aria-hidden="true"></i></button>
+      <button class="close-canvas"><i class="fas fa-times" aria-hidden="true"></i></button>
 		</div>
 	</div>
 
