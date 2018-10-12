@@ -8,7 +8,7 @@
             <?php if ( have_rows('steps') ) : ?>
                 <?php while( have_rows('steps') ) : the_row(); ?>
                     <div class="plan__feature">
-                        <i class="fa <?php the_sub_field('icon') ?>" aria-hidden="true"></i>
+                        <i class="<?php the_sub_field('icon_style') ?> fa-<?php the_sub_field('icon') ?>" aria-hidden="true"></i>
                         <div>
                             <p class="item__title"><?php the_sub_field('title') ?></p>
                             <p class="item__desc"><?php the_sub_field('description') ?></p>

@@ -342,6 +342,32 @@
                                     "maxlength": ""
                                 },
                                 {
+                                    "key": "field_5bc1061a1f828",
+                                    "label": "Icon Style",
+                                    "name": "icon_style",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "fas": "Solid",
+                                        "far": "Regular",
+                                        "fal": "Light"
+                                    },
+                                    "default_value": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
                                     "key": "field_59d7dfcf18d52",
                                     "label": "Icon",
                                     "name": "icon",
@@ -355,7 +381,7 @@
                                         "id": ""
                                     },
                                     "default_value": "flag",
-                                    "placeholder": "flag",
+                                    "placeholder": "fa-flag",
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
@@ -569,5 +595,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539373621
+    "modified": 1539376700
 }
