@@ -104,4 +104,5 @@ function watch() {
   gulp.watch('assets/scss/**/*.scss').on('all', sass);
   gulp.watch('assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('assets/img/**/*').on('all', gulp.series(images, browser.reload));
+  gulp.watch('**/*.php').on('all', browser.reload);
 }
